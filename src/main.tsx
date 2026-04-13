@@ -13,7 +13,7 @@ function ErrorFallback({ error }: { error: Error }) {
   );
 }
 
-class ErrorBoundary extends React.Component
+class ErrorBoundary extends React.Component<
   { children: React.ReactNode },
   { error: Error | null }
 > {
