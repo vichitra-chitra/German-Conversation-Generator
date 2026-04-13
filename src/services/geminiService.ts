@@ -13,7 +13,7 @@ export interface ScriptParams {
 }
 
 export async function generateGermanScript(params: ScriptParams) {
-  const model = "gemini-3-flash-preview";
+  const model = "gemini-2.0-flash";
   const prompt = `
     Create a German conversation script based on the following:
     - Number of people: ${params.numPeople}
@@ -42,7 +42,7 @@ export async function generateGermanScript(params: ScriptParams) {
 }
 
 export async function explainWord(word: string, context: string, level: string) {
-  const model = "gemini-3-flash-preview";
+  const model = "gemini-2.0-flash";
   const prompt = `
     Explain the German word or phrase "${word}" in the context of this sentence: "${context}".
     The explanation should be suitable for a student at the ${level} level.
