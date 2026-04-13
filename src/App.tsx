@@ -4,7 +4,7 @@
  */
 
 import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
   BookOpen, 
   Users, 
@@ -17,7 +17,7 @@ import {
   Info,
   X
 } from "lucide-react";
-import ReactMarkdown from "react-markdown";
+import Markdown from "react-markdown";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -440,7 +440,7 @@ export default function App() {
                 </div>
               ) : (
                 <div className="markdown-body">
-                  <ReactMarkdown>{explanation || ""}</ReactMarkdown>
+                  <Markdown>{explanation || ""}</Markdown>
                 </div>
               )}
             </ScrollArea>

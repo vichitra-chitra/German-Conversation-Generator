@@ -1,6 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
+const apiKey = typeof process !== 'undefined' ? process.env.GEMINI_API_KEY : '';
+const ai = new GoogleGenAI({ apiKey: apiKey || "" });
 
 export interface ScriptParams {
   numPeople: number;
